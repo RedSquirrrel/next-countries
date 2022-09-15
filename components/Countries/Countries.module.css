@@ -1,0 +1,16 @@
+.cardsContainer {
+  padding-top: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 3rem;
+  justify-items: center;
+}
+
+@media (max-width: 600px) {
+  .cardsContainer {
+    justify-content: center;
+    width: 90%;
+  }
+}

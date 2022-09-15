@@ -1,0 +1,26 @@
+.container {
+  height: 340px;
+  background-color: var(--clr__DarkBlue);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.container span {
+  color: var(--clr__grayishWhite);
+  margin-left: 0.3rem;
+}
+
+.info h1,
+.info p {
+  margin: 0;
+  color: var(--clr__White);
+}
+
+.info h1 {
+  font-size: 1.5rem;
+  margin: 0.9rem 1rem;
+  font-weight: 600;
+}
+
+.info p {
+  margin: 0 0 0.2rem 1rem;
+}

@@ -1,0 +1,27 @@
+.container {
+  width: 15rem;
+  user-select: none;
+  position: relative;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+}
+
+.select {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  background: var(--clr__DarkBlue);
+  color: var(--clr__White);
+  cursor: pointer;
+}
+
+.selectBody {
+  background: var(--clr__DarkBlue);
+  color: var(--clr__White);
+  padding: 0 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+}

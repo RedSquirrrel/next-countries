@@ -1,0 +1,73 @@
+.container {
+  margin: 5.5rem auto;
+  max-width: 1440px;
+}
+
+.detailsContainer {
+  padding: 1rem;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  gap: 9rem;
+}
+
+.detailsContainer span {
+  color: var(--clr__grayishWhite);
+}
+
+.backBtn {
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+}
+
+.backBtn a {
+  background: url(../../public/icons/back-arrow.svg) no-repeat left 0.8rem center, var(--clr__DarkBlue);
+  background-size: 1rem;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  padding: 0.3rem 2.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.backBtn a span {
+  padding-left: 1rem;
+}
+
+.allInformation {
+  margin-top: 0.9rem;
+}
+
+.allInformation h1 {
+  margin-bottom: 0.1rem;
+}
+.flag div {
+  max-height: 400px;
+  max-width: 560px;
+  background-color: transparent;
+  box-shadow: 21px 20px 30px rgba(0, 0, 0, 0.5);
+  margin-left: 3.5rem;
+}
+
+.info {
+  display: flex;
+}
+
+.right {
+  width: 50%;
+  margin-left: 9.5rem;
+}
+
+.borders p span:first-child {
+  margin-left: 0.8rem;
+}
+.borders p span {
+  margin-left: 0.5rem;
+}
+
+.bordersValues {
+  background-color: var(--clr__DarkBlue);
+  padding: 0.2rem 2.4rem;
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  font-size: 0.8rem;
+}
