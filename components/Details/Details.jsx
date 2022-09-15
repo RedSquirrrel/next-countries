@@ -58,18 +58,16 @@ const Details = ({ country }) => {
             </div>
           </div>
           <div className={classes.borders}>
-            <p>
-              Border Countries:
-              {country.borders ? (
-                country.borders.map((borderCode, index) => (
-                  <span key={index} className={classes.bordersValues}>
-                    <Borders borderCodes={borderCode} />
-                  </span>
-                ))
-              ) : (
-                <span>No Border</span>
-              )}
-            </p>
+            <p>Border Countries:</p>
+            {country.borders ? (
+              country.borders.map((borderCode, index) => (
+                <span key={index} className={classes.bordersValues}>
+                  <Borders borderCodes={borderCode} />
+                </span>
+              ))
+            ) : (
+              <span>No Border</span>
+            )}
           </div>
         </div>
       </div>

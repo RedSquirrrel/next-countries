@@ -58,16 +58,23 @@
   margin-left: 9.5rem;
 }
 
-.borders p span:first-child {
-  margin-left: 0.8rem;
-}
-.borders p span {
-  margin-left: 0.5rem;
+.borders {
+  height: auto;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .bordersValues {
+  margin-left: 0.5rem;
   background-color: var(--clr__DarkBlue);
   padding: 0.2rem 2.4rem;
-  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
+}
+
+.bordersValues:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
 }
