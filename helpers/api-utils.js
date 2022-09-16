@@ -21,3 +21,10 @@ export async function findByAlphaCode(alphaCode) {
   if (!allCountries) return;
   return allCountries.find(country => country.alpha3Code === alphaCode);
 }
+
+// export async function findByName(name) {
+//   const allCountries = await getAllCoutriesVersionTwo();
+
+//   if (!allCountries) return;
+//   return allCountries.find(country => country.name === name);
+// }
