@@ -10,6 +10,8 @@ export default function Home(props) {
   const { allCountries } = props;
 
   const [searchByName, setSearchByName] = useState('');
+  const [selectedByRegion, setSelectedByRegion] = useState(null);
+  const [isClose, setIsClose] = useState(true);
   const [filteredCountries, setFilteredCountries] = useState(allCountries);
 
   const handleSearchByName = e => {
@@ -24,11 +26,27 @@ export default function Home(props) {
     );
   };
 
+  const handleSearchByRegion = e => {
+    setSelectedByRegion(e.target.textContent);
+    setFilteredCountries(allCountries.filter(country => country.region.includes(e.target.textContent)));
+    setIsClose(true);
+  };
+
+  const handleOpen = () => {
+    setIsClose(!isClose);
+  };
+
   return (
     <div>
       <div className={styles.inputs}>
-        <Input value={searchByName} onChange={handleSearchByName} setSearchByName={setSearchByName} />
-        <Select />
+        <Input value={searchByName} onChange={handleSearchByName} />
+        <Select
+          allCountries={allCountries}
+          handleSearchByRegion={handleSearchByRegion}
+          selectedByRegion={selectedByRegion}
+          handleOpen={handleOpen}
+          isClose={isClose}
+        />
       </div>
       {allCountries.length && <Countries allCountries={allCountries} filteredCountries={filteredCountries} />}
     </div>

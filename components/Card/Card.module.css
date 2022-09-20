@@ -1,7 +1,13 @@
 .container {
   height: 340px;
   background-color: var(--clr__DarkBlue);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover {
+  scale: 0.95;
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
 }
 
 .container span {
