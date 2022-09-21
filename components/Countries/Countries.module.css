@@ -9,6 +9,15 @@
   animation: 0.7s cards ease-in-out;
 }
 
+.fewCardsContainer {
+  padding-top: 2.5rem;
+  max-width: 950px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  animation: 0.7s cards ease-in-out;
+}
+
 @keyframes cards {
   0% {
     opacity: 0;
@@ -28,5 +37,14 @@
   .cardsContainer {
     justify-content: center;
     width: 90%;
+  }
+
+  .fewCardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    animation: 0.7s cards ease-in-out;
   }
 }

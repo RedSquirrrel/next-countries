@@ -1,6 +1,5 @@
-import { getIndividualCountries } from '../helpers/api-utils';
-import { getAllCoutriesVersionTwo } from '../helpers/api-utils';
-import Details from '../components/Details/Details';
+import { getIndividualCountries, getAllCoutriesVersionTwo } from '../../helpers/api-utils';
+import Details from '../../components/Details/Details';
 
 const CountryDetailPage = ({ country }) => {
   return (

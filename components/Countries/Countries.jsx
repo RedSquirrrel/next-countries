@@ -4,11 +4,11 @@ import classes from './Countries.module.css';
 
 const Countries = ({ filteredCountries }) => {
   return (
-    <div className={classes.cardsContainer}>
+    <div className={filteredCountries.length <= 3 ? classes.fewCardsContainer : classes.cardsContainer}>
       {filteredCountries &&
         filteredCountries.map((country, index) => (
-          <Link key={country.name} href={`/${country.name}`}>
-            <a href={`/${country.name}`}>
+          <Link key={country.name} href={`/country-name/${country.name}`}>
+            <a href={`/country-name/${country.name}`}>
               <Card country={country} />
             </a>
           </Link>
