@@ -1,0 +1,71 @@
+.container {
+  position: absolute;
+  background-color: #0277d7;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.content {
+  margin: 5rem 5rem 0;
+  color: var(--clr__White);
+}
+
+.content h1 {
+  margin: 0;
+  font-size: clamp(2rem, 15vw, 15rem);
+  font-weight: 100;
+}
+
+.content p {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.goHomeBtn {
+  font-size: clamp(1rem, 2vw, 2rem);
+  margin: 0 5rem;
+  color: var(--clr__White);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 35rem;
+}
+
+.goHomeBtn span {
+  padding: 1rem 1rem 1rem 0;
+  transition: all 0.2s ease;
+}
+
+.goHomeBtn a {
+  font-size: clamp(1rem, 2vw, 2rem);
+  padding: 1rem;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0px 0px 12.5px rgba(0, 0, 0, 0.4);
+  background-color: rgb(1, 111, 201);
+}
+
+.goHomeBtn :nth-child(2):hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .goHomeBtn {
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: unset;
+  }
+
+  .content {
+    margin: 5rem 0;
+  }
+
+  .goHomeBtn a {
+    padding: 0;
+    box-shadow: unset;
+    background-color: unset;
+  }
+}

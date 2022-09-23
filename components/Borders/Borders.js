@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Button from '../Button/Button';
 import { findByAlphaCode } from '../../helpers/api-utils';
 
 const Borders = ({ borderCodes }) => {
@@ -19,9 +20,9 @@ const Borders = ({ borderCodes }) => {
 
   return (
     <>
-      <a href={`/${borderCountries.name}`}>
+      <Button link={`/country-name/${borderCountries.name}`}>
         <span>{borderCountries.name}</span>
-      </a>
+      </Button>
     </>
   );
 };

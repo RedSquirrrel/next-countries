@@ -8,7 +8,7 @@ const Countries = ({ filteredCountries }) => {
       {filteredCountries &&
         filteredCountries.map((country, index) => (
           <Link key={country.name} href={`/country-name/${country.name}`}>
-            <a href={`/country-name/${country.name}`}>
+            <a>
               <Card country={country} />
             </a>
           </Link>

@@ -16,6 +16,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
+  background: var(--clr__VeryDarkBlue__bg--dark);
 }
 
 a {
@@ -26,7 +27,7 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -34,5 +35,5 @@ a {
     color: var(--clr__White);
     background: var(--clr__VeryDarkBlue__bg--dark);
   }
-}
+} */
 

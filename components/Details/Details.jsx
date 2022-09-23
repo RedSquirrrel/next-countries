@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Button from '../Button/Button';
 import Image from 'next/image';
 import Borders from '../Borders/Borders';
 import classes from './Details.module.css';
@@ -13,11 +13,9 @@ const Details = ({ country }) => {
   return (
     <div className={classes.container}>
       <div className={classes.backBtn}>
-        <Link href={'/'}>
-          <a href='/'>
-            <span>Back</span>
-          </a>
-        </Link>
+        <Button link={'/'}>
+          <span>Back</span>
+        </Button>
       </div>
       <div className={classes.detailsContainer}>
         <div className={classes.flag}>
