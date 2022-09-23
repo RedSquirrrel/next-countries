@@ -9,14 +9,12 @@ const Borders = ({ borderCodes }) => {
     const countryByCode = findByAlphaCode(borderCodes);
     countryByCode
       .then(resp => {
-        if (borderCountries) {
-          setBorderCountries(resp);
-        }
+        setBorderCountries(resp);
       })
       .catch(error => {
         console.log(error);
       });
-  }, []);
+  }, [borderCodes]);
 
   return (
     <>

@@ -1,0 +1,8 @@
+.scroll_container {
+  overflow: scroll;
+  max-height: 62.5rem;
+  max-width: 85vw;
+  overflow-x: hidden;
+  padding-bottom: 5rem;
+  margin: 0 auto;
+}

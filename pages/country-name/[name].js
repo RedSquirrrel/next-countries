@@ -2,6 +2,9 @@ import { getIndividualCountries, getAllCoutriesVersionTwo } from '../../helpers/
 import Details from '../../components/Details/Details';
 
 const CountryDetailPage = ({ country }) => {
+  if (!country) {
+    return <p>Loading...</p>;
+  }
   return (
     <div>
       <Details country={country} />
@@ -13,6 +16,11 @@ export async function getStaticProps(context) {
   const countryName = context.params.name;
 
   const country = await getIndividualCountries(countryName);
+
+  if (!country) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       country,

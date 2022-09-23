@@ -18,7 +18,7 @@ const Navigation = () => {
             <li className={classes.where}>Where in the world?</li>
           </Link>
           <li className={classes.mode} onClick={handleMode}>
-            <Image src={`${!light ? '/icons/moon.svg' : '/icons/sun.svg'}`} width={25} height={25} />
+            <Image src={`${!light ? '/icons/moon.svg' : '/icons/sun.svg'}`} width={25} height={25} alt='' />
             <span>{`${!light ? 'Dark Mode' : 'Light Mode'}`}</span>
           </li>
         </ul>

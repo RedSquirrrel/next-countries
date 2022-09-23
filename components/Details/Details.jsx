@@ -20,7 +20,7 @@ const Details = ({ country }) => {
       <div className={classes.detailsContainer}>
         <div className={classes.flag}>
           <div>
-            <Image src={country.flags.png} width={560} height={400} />
+            <Image src={country.flags.png} width={560} height={400} alt={country.nativeName} />
           </div>
         </div>
         <div className={classes.allInformation}>

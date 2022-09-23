@@ -27,6 +27,18 @@ a {
   box-sizing: border-box;
 }
 
+*::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--clr__VeryDarkBlue__bg--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--clr__VeryDarkBlue__bg--dark);
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

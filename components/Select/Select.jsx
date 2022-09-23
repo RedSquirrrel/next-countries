@@ -12,7 +12,7 @@ const Select = ({ allCountries, handleSearchByRegion, selectedByRegion, handleOp
         <p>{selectedByRegion || 'Filter by Region'}</p>
         <Image src={`${!isClose ? '/icons/chevron-down.svg' : '/icons/chevron-up.svg'}`} alt='chevron icon' width={20} height={20} />
       </div>
-      <div className={classes.selectBody} style={isClose ? { opacity: 0 } : { opacity: 1 }} as='style'>
+      <div className={classes.selectBody} style={isClose ? { opacity: 0 } : { opacity: 1 }}>
         {!isClose &&
           regions.map((region, index) => (
             <p key={index} onClick={handleSearchByRegion}>

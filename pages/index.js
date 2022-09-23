@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Countries from '../components/Countries/Countries';
 import Input from '../components/Input/Input';
+import Scroll from '../components/Scroll/Scroll';
 import Select from '../components/Select/Select';
 import { getAllCoutriesVersionTwo } from '../helpers/api-utils';
 
@@ -48,7 +49,7 @@ export default function Home(props) {
           isClose={isClose}
         />
       </div>
-      {allCountries.length && <Countries allCountries={allCountries} filteredCountries={filteredCountries} />}
+      <Scroll>{allCountries.length && <Countries allCountries={allCountries} filteredCountries={filteredCountries} />}</Scroll>
     </div>
   );
 }
@@ -56,10 +57,15 @@ export default function Home(props) {
 export const getStaticProps = async () => {
   const allCountries = await getAllCoutriesVersionTwo();
 
+  if (allCountries.length === 0) {
+    return { notFound: true };
+  }
+
   return {
     props: {
       allCountries,
     },
+    revalidate: 60,
   };
 };
 

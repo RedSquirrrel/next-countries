@@ -10,7 +10,7 @@ const NotFoundPage = () => {
         <p>The link you followed is probably broken, or the page has been removed.</p>
       </div>
       <div className={classes.goHomeBtn}>
-        <span>Don't worry. </span>
+        <span>Don&lsquo;t worry. </span>
         <span>
           <Button link={'/'}>Return to Home Page</Button>
         </span>
