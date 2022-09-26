@@ -1,10 +1,21 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import classes from './Select.module.css';
 
-const Select = ({ allCountries, handleSearchByRegion, selectedByRegion, handleOpen, isClose }) => {
+const Select = ({ allCountries, selectedByRegion, setSelectedByRegion }) => {
+  const [isClose, setIsClose] = useState(true);
   const allRegions = allCountries.map(r => r.region);
   const removeDuplicatesRegion = new Set(allRegions);
-  const regions = [...removeDuplicatesRegion];
+  const regions = [...removeDuplicatesRegion, 'All Regions'];
+
+  const handleSearchByRegion = e => {
+    setSelectedByRegion(e.target.textContent);
+    setIsClose(!isClose);
+  };
+
+  const handleOpen = () => {
+    setIsClose(!isClose);
+  };
 
   return (
     <div className={classes.container}>
@@ -14,11 +25,13 @@ const Select = ({ allCountries, handleSearchByRegion, selectedByRegion, handleOp
       </div>
       <div className={classes.selectBody} style={isClose ? { opacity: 0 } : { opacity: 1 }}>
         {!isClose &&
-          regions.map((region, index) => (
-            <p key={index} onClick={handleSearchByRegion}>
-              {region}
-            </p>
-          ))}
+          regions.map((region, index) => {
+            return (
+              <p key={index} onClick={handleSearchByRegion}>
+                {region}
+              </p>
+            );
+          })}
       </div>
     </div>
   );

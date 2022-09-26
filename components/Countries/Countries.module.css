@@ -33,6 +33,10 @@
   }
 }
 
+.noCountry {
+  color: var(--clr__White);
+}
+
 @media (max-width: 600px) {
   .cardsContainer {
     justify-content: center;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Countries from '../components/Countries/Countries';
 import Input from '../components/Input/Input';
 import Scroll from '../components/Scroll/Scroll';
@@ -11,45 +11,38 @@ export default function Home(props) {
   const { allCountries } = props;
 
   const [searchByName, setSearchByName] = useState('');
-  const [selectedByRegion, setSelectedByRegion] = useState(null);
-  const [isClose, setIsClose] = useState(true);
-  const [filteredCountries, setFilteredCountries] = useState(allCountries);
+  const [selectedByRegion, setSelectedByRegion] = useState('');
+  const [filteredCountries, setFilteredCountries] = useState([]);
 
-  const handleSearchByName = e => {
-    setSearchByName(e.target.value);
-    setFilteredCountries(
-      allCountries.filter(
-        country =>
-          country.name.toLowerCase().includes(e.target.value) ||
-          country.name.toUpperCase().includes(e.target.value) ||
-          country.name.includes(e.target.value)
-      )
-    );
-  };
+  useEffect(() => {
+    const inputSelection = allCountries.filter(country => country.name.toLowerCase().includes(searchByName.toLowerCase()));
+    setFilteredCountries(inputSelection);
+  }, [searchByName, allCountries]);
 
-  const handleSearchByRegion = e => {
-    setSelectedByRegion(e.target.textContent);
-    setFilteredCountries(allCountries.filter(country => country.region.includes(e.target.textContent)));
-    setIsClose(true);
-  };
+  useEffect(() => {
+    const selectionByRegion = allCountries.filter(country => country.region.includes(selectedByRegion));
+    setFilteredCountries(selectionByRegion);
+  }, [allCountries, selectedByRegion]);
 
-  const handleOpen = () => {
-    setIsClose(!isClose);
-  };
+  useEffect(() => {
+    const searchFromFilteredRegion = allCountries.filter(country => country.region.includes(selectedByRegion));
+    const filteredResult = searchFromFilteredRegion.filter(country => country.name.toLowerCase().includes(searchByName.toLowerCase()));
+    setFilteredCountries(filteredResult);
+    if (selectedByRegion === 'All Regions') {
+      const inputSearch = allCountries.filter(country => country.name.toLowerCase().includes(searchByName.toLowerCase()));
+      setFilteredCountries(inputSearch);
+    }
+  }, [allCountries, selectedByRegion, searchByName]);
 
   return (
     <div>
       <div className={styles.inputs}>
-        <Input value={searchByName} onChange={handleSearchByName} />
-        <Select
-          allCountries={allCountries}
-          handleSearchByRegion={handleSearchByRegion}
-          selectedByRegion={selectedByRegion}
-          handleOpen={handleOpen}
-          isClose={isClose}
-        />
+        <Input setSearchByName={setSearchByName} />
+        <Select allCountries={allCountries} selectedByRegion={selectedByRegion} setSelectedByRegion={setSelectedByRegion} />
       </div>
-      <Scroll>{allCountries.length && <Countries allCountries={allCountries} filteredCountries={filteredCountries} />}</Scroll>
+      <Scroll>
+        <Countries filteredCountries={filteredCountries} />
+      </Scroll>
     </div>
   );
 }
