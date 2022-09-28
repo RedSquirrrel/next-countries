@@ -6,7 +6,7 @@ const Countries = ({ filteredCountries }) => {
   const displayCountries = filteredCountries.map(country => {
     return (
       <div key={country.name}>
-        <Link key={country.name} href={`/country-name/${country.name}`}>
+        <Link key={country.name} href={`/countryName/${country.name}`}>
           <a>
             <Card country={country} />
           </a>

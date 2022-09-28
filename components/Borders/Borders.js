@@ -18,7 +18,7 @@ const Borders = ({ borderCodes }) => {
 
   return (
     <>
-      <Button link={`/country-name/${borderCountries.name}`}>
+      <Button link={`/countryName/${borderCountries.name}`}>
         <span>{borderCountries.name}</span>
       </Button>
     </>

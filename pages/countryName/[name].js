@@ -32,11 +32,10 @@ export async function getStaticPaths() {
   const countries = await getAllCoutriesVersionTwo();
 
   const paths = countries.map(country => ({ params: { name: country.name } }));
-  console.log('Build slug', paths);
 
   return {
     paths: paths,
-    fallback: true,
+    fallback: false,
   };
 }
 
