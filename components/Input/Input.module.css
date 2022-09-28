@@ -2,9 +2,9 @@
   padding: 1rem 4.5rem;
   width: 30rem;
   border-radius: 5px;
-  background: url(../../public/icons/search.svg) no-repeat left 2rem center, var(--clr__DarkBlue);
+  background: var(--on-icon-search-bg);
   border: none;
   font-size: 1.2rem;
-  color: var(--clr__White);
+  color: var(--on-text);
   box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
 }

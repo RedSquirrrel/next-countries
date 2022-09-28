@@ -8,7 +8,7 @@ const Card = ({ country }) => {
         <Image priority={true} src={country.flags.png} width={250} height={160} alt={country.name.common} />
       </div>
       <div className={classes.info}>
-        <h1>{country.name.common}</h1>
+        <h1>{country.name}</h1>
         <p>
           Population: <span>{country.population.toLocaleString()} </span>{' '}
         </p>

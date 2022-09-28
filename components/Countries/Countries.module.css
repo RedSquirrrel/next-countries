@@ -34,7 +34,7 @@
 }
 
 .noCountry {
-  color: var(--clr__White);
+  color: var(--on-text);
 }
 
 @media (max-width: 600px) {

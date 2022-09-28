@@ -1,13 +1,15 @@
 .nav_container {
   padding: 0.6rem 0;
-  background-color: var(--clr__DarkBlue);
+  background-color: var(--on-header);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s ease-in-out;
 }
 
 .nav_list {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  color: var(--clr__White);
+  color: var(--on-text);
   padding: 0 4rem;
 }
 

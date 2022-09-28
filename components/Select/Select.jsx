@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import Image from 'next/image';
 import classes from './Select.module.css';
 
 const Select = ({ allCountries, selectedByRegion, setSelectedByRegion }) => {
@@ -21,7 +20,7 @@ const Select = ({ allCountries, selectedByRegion, setSelectedByRegion }) => {
     <div className={classes.container}>
       <div className={classes.select} onClick={handleOpen}>
         <p>{selectedByRegion || 'Filter by Region'}</p>
-        <Image src={`${!isClose ? '/icons/chevron-down.svg' : '/icons/chevron-up.svg'}`} alt='chevron icon' width={20} height={20} />
+        <span className={classes.chevron} style={isClose ? { transform: 'rotate(-180deg)' } : { transform: 'rotate(0deg)' }}></span>
       </div>
       <div className={classes.selectBody} style={isClose ? { opacity: 0 } : { opacity: 1 }}>
         {!isClose &&

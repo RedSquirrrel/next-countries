@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
+/* Default is dark */
 :root {
-  --clr__DarkBlue: hsl(209, 23%, 22%);
-  --clr__VeryDarkBlue__bg--dark: hsl(207, 26%, 17%);
-  --clr__VeryDarkBlue__tx: hsl(200, 15%, 8%);
-  --clr__DarkGray: hsl(0, 0%, 52%);
-  --clr__VeryLightGray: hsl(0, 0%, 98%);
-  --clr__White: hsl(0, 0%, 100%);
-  --clr__grayishWhite: hsla(0, 0%, 100%, 0.596);
-  --clr__VeryDarkBlue__bg--light: hsl(0, 0%, 98%);
+  --on-background: hsl(207, 26%, 17%);
+  --on-header: hsl(209, 23%, 22%);
+  --on-text: hsl(0, 0%, 100%);
+  --on-text-card-h1-p: hsl(0, 0%, 100%);
+  --on-text-card-span: hsl(0, 0%, 52%);
+  --on-icon-search-bg: url(../public/icons/search-light.svg) no-repeat left 2rem center;
+  --on-backBtn-bg: url(../public/icons/back-arrow-light.svg) no-repeat left 0.8rem center;
+  --on-chevronBtn-bg: url(../public/icons/chevron-light.svg) no-repeat right 0.8rem center;
+  --on-hover: #2196f3;
+}
+
+[data-theme='dark'] {
+  --on-background: hsl(0, 0%, 98%);
+  --on-header: hsl(0, 0%, 98%);
+  --on-text: hsl(200, 15%, 8%);
+  --on-text-card-h1-p: hsl(207, 26%, 17%);
+  --on-text-card-span: hsl(200, 15%, 8%);
+  --on-icon-search-bg: url(../public/icons/search-dark.svg) no-repeat left 2rem center;
+  --on-backBtn-bg: url(../public/icons/back-arrow-dark.svg) no-repeat left 0.8rem center;
+  --on-chevronBtn-bg: url(../public/icons/chevron-dark.svg) no-repeat right 0.8rem center;
+  --on-hover: #2196f3;
 }
 
 html,
@@ -16,7 +30,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
-  background: var(--clr__VeryDarkBlue__bg--dark);
+  background: var(--on-background);
+  transition: all 0.2s ease-in-out;
+  height: 100vh;
 }
 
 a {
@@ -32,20 +48,10 @@ a {
 }
 
 *::-webkit-scrollbar-track {
-  background: var(--clr__VeryDarkBlue__bg--dark);
+  background: var(--on-background);
 }
 
 *::-webkit-scrollbar-thumb {
-  background: var(--clr__VeryDarkBlue__bg--dark);
+  background: var(--on-background);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: var(--clr__White);
-    background: var(--clr__VeryDarkBlue__bg--dark);
-  }
-} */
 
