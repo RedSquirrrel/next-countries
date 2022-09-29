@@ -1,26 +1,21 @@
 .inputs {
-  padding: 3rem;
+  padding: 2.5rem 3rem;
   display: flex;
   justify-content: space-between;
 }
 
-/* @media (max-width: 600px) {
-  .grid {
-    width: 100%;
+@media (max-width: 850px) {
+  .inputs {
+    display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media (max-width: 900px) {
+  .inputs {
+    display: flex;
+    justify-content: space-between;
   }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
-} */
+}
 

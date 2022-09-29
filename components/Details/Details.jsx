@@ -1,5 +1,4 @@
 import Button from '../Button/Button';
-import Image from 'next/image';
 import Borders from '../Borders/Borders';
 import classes from './Details.module.css';
 
@@ -19,9 +18,9 @@ const Details = ({ country }) => {
       </div>
       <div className={classes.detailsContainer}>
         <div className={classes.flag}>
-          <div>
-            <Image src={country.flags.png} width={560} height={400} alt={country.nativeName} />
-          </div>
+          <picture>
+            <img src={country.flags.png} alt={country.nativeName} />
+          </picture>
         </div>
         <div className={classes.allInformation}>
           <h1>{country.name}</h1>
@@ -57,15 +56,17 @@ const Details = ({ country }) => {
           </div>
           <div className={classes.borders}>
             <p>Border Countries:</p>
-            {country.borders ? (
-              country.borders.map((borderCode, index) => (
-                <span key={index} className={classes.bordersValues}>
-                  <Borders borderCodes={borderCode} />
-                </span>
-              ))
-            ) : (
-              <span>No Border</span>
-            )}
+            <div className={classes.bordersValuesContainer}>
+              {country.borders ? (
+                country.borders.map((borderCode, index) => (
+                  <span key={index} className={classes.bordersValues}>
+                    <Borders borderCodes={borderCode} />
+                  </span>
+                ))
+              ) : (
+                <span>No Border</span>
+              )}
+            </div>
           </div>
         </div>
       </div>

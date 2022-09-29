@@ -55,3 +55,8 @@ a {
   background: var(--on-background);
 }
 
+main {
+  height: 100%;
+  padding-bottom: 2rem;
+}
+

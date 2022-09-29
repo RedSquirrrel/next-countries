@@ -31,7 +31,7 @@ const Navigation = () => {
             <li className={classes.where}>Where in the world?</li>
           </Link>
           <li className={classes.mode} onClick={handleMode}>
-            <Image src={`${theme === 'dark' ? '/icons/moon.svg' : '/icons/sun.svg'}`} width={25} height={25} alt='' />
+            <Image src={`${theme === 'dark' ? '/icons/moon.svg' : '/icons/sun.svg'}`} width={20} height={20} alt='' />
             <span>{`${theme === 'dark' ? 'Dark Mode' : 'Light Mode'}`}</span>
           </li>
         </ul>

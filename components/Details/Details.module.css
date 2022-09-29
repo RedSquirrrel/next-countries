@@ -9,6 +9,8 @@
   color: var(--on-text);
   display: flex;
   gap: 9rem;
+  margin-left: 3.5rem;
+  width: 100%;
 }
 
 .detailsContainer span {
@@ -41,12 +43,16 @@
 .allInformation h1 {
   margin-bottom: 0.1rem;
 }
-.flag div {
-  max-height: 400px;
-  max-width: 560px;
+.flag {
+  height: 43%;
+  min-width: 42%;
   background-color: transparent;
   box-shadow: 21px 20px 30px rgba(0, 0, 0, 0.5);
-  margin-left: 3.5rem;
+}
+
+.flag img {
+  height: 100%;
+  width: 100%;
 }
 
 .info {
@@ -59,14 +65,25 @@
 }
 
 .borders {
-  height: auto;
+  height: 8rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
+.borders p {
+  width: 25%;
+  align-self: flex-start;
+}
+
+.bordersValuesContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 8rem;
+  width: 75%;
+}
+
 .bordersValues {
-  margin-left: 0.5rem;
   padding: 0.2rem 2.4rem;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   font-size: 0.8rem;
@@ -86,4 +103,61 @@
 .left p span,
 .right p span {
   font-weight: 300;
+}
+
+@media (max-width: 1000px) {
+  .detailsContainer {
+    flex-direction: column;
+    width: 90%;
+    padding: 1rem;
+    gap: 1rem;
+    margin-left: unset;
+    margin: auto;
+  }
+
+  .borders {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .borders p {
+    width: auto;
+  }
+
+  .bordersValuesContainer {
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding-bottom: 2rem;
+  }
+
+  .flag {
+    height: auto;
+    width: 100%;
+    margin: auto;
+  }
+
+  .flag img {
+    width: 100%;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .right {
+    width: 100%;
+    margin-left: unset;
+    margin-top: 4rem;
+  }
+
+  .bordersValuesContainer {
+    height: 8rem;
+    width: 100%;
+  }
 }

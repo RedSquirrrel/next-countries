@@ -1,5 +1,6 @@
 .container {
   height: 340px;
+  max-width: 250px;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
   text-decoration: none;
 }

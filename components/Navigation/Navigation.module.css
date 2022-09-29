@@ -10,7 +10,8 @@
   align-content: center;
   justify-content: space-between;
   color: var(--on-text);
-  padding: 0 4rem;
+  padding: 0 5rem;
+  width: 100%;
 }
 
 .nav_list li {
@@ -18,7 +19,7 @@
 }
 
 .nav_list .where {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   font-weight: 700;
   cursor: pointer;
 }
@@ -26,11 +27,12 @@
 .nav_list .mode {
   display: flex;
   align-items: center;
-  width: 10rem;
+  justify-content: flex-end;
   cursor: pointer;
 }
 
-.nav_list .mode span {
-  margin-left: 1rem;
-  font-size: 1.1rem;
+@media (max-width: 850px) {
+  .nav_list {
+    padding: 0 1rem;
+  }
 }

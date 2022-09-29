@@ -6,7 +6,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  <!-- - [Screenshot](#screenshot) -->
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -26,15 +26,15 @@ Users should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode _(optional)_
 
-<!-- ### Screenshot
+### Screenshot
 
-![](./screenshot.jpg) -->
+![](./cover.png)
 
 ### Links
 
-[- Solution URL](https://github.com/RedSquirrrel/next-countries)
+[- Solution](https://github.com/RedSquirrrel/next-countries)
 
-<!-- [- Live Site URL](https://your-live-site-url.com) -->
+[- Live Site](https://where-2-go-next.netlify.app/)
 
 ## My process
 
@@ -47,7 +47,7 @@ Users should be able to:
 
 ## Author
 
-<!-- - Website - [RedSquirrrel](https://www.your-site.com) -->
+- Website - [RedSquirrrel](https://where-2-go-next.netlify.app/)
 
 - Frontend Mentor - [@RedSquirrrel](https://www.frontendmentor.io/profile/redsquirrrel)
 
