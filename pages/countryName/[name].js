@@ -1,10 +1,14 @@
+import { useRouter } from 'next/router';
 import { getIndividualCountries, getAllCoutriesVersionTwo } from '../../helpers/api-utils';
 import Details from '../../components/Details/Details';
 
 const CountryDetailPage = ({ country }) => {
-  if (!country) {
+  const router = useRouter();
+
+  if (router.isFallback || !country) {
     return <p>Loading...</p>;
   }
+
   return (
     <div>
       <Details country={country} />
@@ -25,17 +29,18 @@ export async function getStaticProps(context) {
     props: {
       country,
     },
+    revalidate: 10,
   };
 }
 
 export async function getStaticPaths() {
-  const countries = await getAllCoutriesVersionTwo();
+  // const countries = await getAllCoutriesVersionTwo();
 
-  const paths = countries.map(country => ({ params: { name: country.name } }));
+  const paths = [{ params: { name: 'Hungary' } }, { params: { name: 'Italy' } }];
 
   return {
     paths: paths,
-    fallback: false,
+    fallback: true,
   };
 }
 

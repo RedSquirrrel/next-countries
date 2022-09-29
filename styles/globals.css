@@ -7,9 +7,9 @@
   --on-text: hsl(0, 0%, 100%);
   --on-text-card-h1-p: hsl(0, 0%, 100%);
   --on-text-card-span: hsl(0, 0%, 52%);
-  --on-icon-search-bg: url(../public/icons/search-light.svg) no-repeat left 2rem center;
-  --on-backBtn-bg: url(../public/icons/back-arrow-light.svg) no-repeat left 0.8rem center;
-  --on-chevronBtn-bg: url(../public/icons/chevron-light.svg) no-repeat right 0.8rem center;
+  --on-icon-search-bg: url(/icons/search-light.svg) no-repeat left 2rem center;
+  --on-backBtn-bg: url(/icons/back-arrow-light.svg) no-repeat left 0.8rem center;
+  --on-chevronBtn-bg: url(/icons/chevron-light.svg) no-repeat right 0.8rem center;
   --on-hover: #2196f3;
 }
 
@@ -19,9 +19,9 @@
   --on-text: hsl(200, 15%, 8%);
   --on-text-card-h1-p: hsl(207, 26%, 17%);
   --on-text-card-span: hsl(200, 15%, 8%);
-  --on-icon-search-bg: url(../public/icons/search-dark.svg) no-repeat left 2rem center;
-  --on-backBtn-bg: url(../public/icons/back-arrow-dark.svg) no-repeat left 0.8rem center;
-  --on-chevronBtn-bg: url(../public/icons/chevron-dark.svg) no-repeat right 0.8rem center;
+  --on-icon-search-bg: url(/icons/search-dark.svg) no-repeat left 2rem center;
+  --on-backBtn-bg: url(/icons/back-arrow-dark.svg) no-repeat left 0.8rem center;
+  --on-chevronBtn-bg: url(/icons/chevron-dark.svg) no-repeat right 0.8rem center;
   --on-hover: #2196f3;
 }
 
